@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 80px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    background: #34495e;
+    color: #ecf0f1;
+    outline: none;
+    font-family: 'Courier New', monospace;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.number {
+    background: #95a5a6;
+    color: #2c3e50;
+}
+
+.number:hover {
+    background: #bdc3c7;
+}
+
+.operator {
+    background: #e74c3c;
+    color: white;
+}
+
+.operator:hover {
+    background: #c0392b;
+}
+
+.function {
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+}
+
+.function:hover {
+    background: #2980b9;
+}
+
+.clear {
+    background: #e67e22;
+    color: white;
+}
+
+.clear:hover {
+    background: #d35400;
+}
+
+.equals {
+    background: #27ae60;
+    color: white;
+    grid-column: span 2;
+}
+
+.equals:hover {
+    background: #229954;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    #result {
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
